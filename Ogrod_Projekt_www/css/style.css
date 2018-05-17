@@ -1,0 +1,295 @@
+/* Css reset */
+html, body, div, span, button, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    font-size:100%;
+    font:inherit;
+    vertical-align:baseline;
+    text-decoration: none;
+    font-family: 'Varela', sans-serif;
+    outline: none;
+    font-size: 12px;
+  }  
+  article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display:block;
+  }
+  body {
+    line-height:1;
+    width: 100%;
+    background: rgba(36, 81, 31,1);
+    background-attachment: fixed;
+    background-size: cover;   
+  }  
+  ul, ol {
+    list-style:none;
+  }  
+  blockquote, q {
+    quotes:none;
+  } 
+  blockquote:before, blockquote:after, q:before, q:after {
+    content:'';
+    content:none;
+  }
+  
+  table {
+    border-collapse:collapse;
+    border-spacing:0;
+  }
+
+header {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 3vw;
+    min-width: 100%;
+    display: flex;
+    min-height: 5vh;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.logo {
+    flex-grow: 3;
+    flex-basis: 5%;
+    
+    
+}
+.logo img {
+    height: 2vw;
+}
+
+.navButtons img:hover {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+.navButtons {
+    /* position: relative; */
+    flex-grow: 2;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.navButtons > a {
+    color: black;   
+    font-weight: bold;
+}
+#contactBtn {
+    display: flex;
+    background-color: rgba(192, 192, 192, 0.5);
+    width: 16vh;
+    height: 3vh;
+    color: antiquewhite;
+    font-weight: bold;
+    border-radius: 1vh;
+    font-size: 2vh;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 1px 1px 1px black;
+}
+#contactBtn:hover {
+    background-color:#a6d885;
+}
+#videoDiv {
+    position: absolute;  
+}
+.video-background {
+    position: fixed;
+    top: 50%; 
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    min-width: 100%; 
+    min-height: 100%; 
+    width: auto; 
+    height: auto;
+    z-index: -1000; 
+    overflow: hidden;
+}
+h1 {
+    font-size: 12vh;
+    color: antiquewhite;
+    font-family: 'Dancing Script', cursive !important;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px black;
+}
+.marginDiv {
+    width: 100%;
+    background:rgba(255, 255, 255, 0.95);
+}
+.center {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.mainDiv, #nursery, #public, #private {
+    height: 90vh;
+    display: flex;  
+    padding-top: 5vh !important;
+}
+.mainDiv {
+    flex-direction: column;
+    width: 100%;
+}
+#motto {
+    flex-grow: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.buttons {
+    flex-grow: 3;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+
+}
+.buttons > a, #stopVid{
+    display: flex;
+    background-color: rgba(192, 192, 192, 0.5);
+    width: 24vh;
+    height: 6vh;
+    color: antiquewhite;
+    font-weight: bold;
+    border-radius: 2vh;
+    font-size: 2vh;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 1px 1px 1px black; 
+}
+.buttons > a:hover, #stopVid:hover {
+    background-color: rgba(0,167,0,.5);
+}
+.contact {
+    height: 33vh;
+    display: flex;
+    border: 1px solid teal;
+}
+#nursery {
+    display: flex;
+    flex-direction: column;
+    padding: 2%
+}
+h2 {
+    font-size: 4vh;
+}
+.infoDivs {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nurseryContent {
+    flex-grow: 4;
+    display: flex;
+    flex-direction: row;
+    padding: 2%;
+    width: 100%;
+
+}
+
+.galleryWrapper {
+    flex-grow: 2;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    padding: 2%;  
+}
+/* .slider {
+} */
+.slider > ul > li > img {
+    overflow: hidden;
+    width: 100%;
+}
+.nurseryTextContent {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    width: 100%;
+}
+.nurseryText {
+    display: flex;
+    flex-grow: 4;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2%;
+    flex-direction: column;
+    width: 100%;
+}
+#sliderWrapper img {
+    max-height: 600px;
+    width: 100%;
+    border-radius: 50%;
+    border: 1px solid black;
+
+}
+#map {
+    flex-grow: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#map iframe {
+    width: 90%;
+    height: 100%;
+    box-shadow: 1vh 1vh;
+}
+.visible {
+    display: block;
+}
+
+.slider ul{
+    list-style: none;
+}
+
+.slider li{
+    display: none;
+  
+}
+
+.slider .visible{
+    display: inline-block; 
+}
+.sliderButtons {
+    display: flex;
+    justify-content: space-around;
+    margin: 2vh;
+}
+
+.sliderButtons button {
+    background-color: rgba(192, 192, 192, 0.5);
+    width: 100%;
+    height: 100%;
+    color: black;
+    font-weight: bold;
+    border-radius: 2vh;
+    font-size: 2vh;
+    align-items: center;
+    justify-content: center;
+}
+span {
+    font-size: 4vh;
+}
+.sliderButtons button:hover {
+
+background-color: rgba(0,167,0,.5)
+}
+.contact {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.contact div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.contact  h2, h3 {
+    color: antiquewhite;
+    margin-top: 5vh;
+}

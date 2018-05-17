@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Ogrod-Projekt</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Varela" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <header>
+        <div class="logo">
+            <a href="#"><img src="images/logo.png" alt="Logo Ogrod-Projekt"/></a>
+        </div>
+        <div class="navButtons logo">
+           <a href="#contact" id="contactBtn">Kontakt</a>
+           <a target="_blank" href="https://web.facebook.com/ogrodprojekt.eu/"><img  src="images/fb2.png" alt="Facebook logo"></a>
+        </div>
+    </header>
+    <div class="main"> 
+        <div id="fullScreenDiv">
+            <div id="videoDiv">      
+                <video id="myVideo" autoPlay loop class="video-background" muted playsInline>
+                    <source
+                    src="images/background_v5.mp4"
+                    type="video/mp4"/> 
+                                   
+                </video>
+            </div>    
+            <div class="mainDiv">
+                    <div id="motto">
+                        <h1 id="demo"></h1>
+                    </div>
+                    <!-- <button id="stopVid">||</button>   -->
+                    <div class="buttons">
+                        <a id="nurseryBtn" href="#nursery">Sadzonki</a>
+                        <a href="#public">Zieleń publiczna</a>
+                        <a href="#private">Ogrody</a>
+                    </div>
+                    
+            </div> 
+        </div>             
+        <div class="marginDiv">
+                <div class="center">
+                        <div id="nursery">
+                            <div class="infoDivs">
+                                <h2>Poznaj nasze szkółki</h2>
+                            </div>
+                            <div class="nurseryContent">
+                                <div class="galleryWrapper"> 
+                                    <div id="sliderWrapper" class="slider">
+                                        <ul>
+                                            <li><img src="images/szkolki_7.jpg"></li>
+                                            <li><img src="images/szkolki_8.jpg"></li>
+                                            <li><img src="images/szkolki_11.jpg"></li>
+                                            <li><img src="images/szkolki_25.jpg"></li>
+                                            <li><img src="images/szkolki_27.jpg"></li>
+                                            <li><img src="images/szkolki_30.jpg"></li>
+                                        </ul>
+                                        <div class="sliderButtons">
+                                                <button id="prevPicture"><span><</span></button>
+                                                <button id="nextPicture"><span>></span></button>
+                                        </div>
+                                        
+                                    </div>
+                                        
+                                </div>
+                                <div class="nurseryTextContent">
+                                    <div class="nurseryText">
+                                        <h3>Powieksz swóją kolekcję roślin. Nasze ponad 20-letnie doświadczenie procentuje.
+                            
+                                        </h3>
+                                        <p>
+                                            Posiadamy ogromy wybór roślin do ogrodu i na balkon! Wykwalifikowany personel pomoże w wyborze odpowiedniej sadzonki.</p>
+                                    </div>
+                                        <div id="map">
+                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d163645.37561339827!2d22.849627973584475!3d50.14319895618466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473ca77dae43527d%3A0xe01d7b98e362de75!2sOgr%C3%B3d-Projekt.+Olejarska+J.!5e0!3m2!1spl!2spl!4v1526478900066" /></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>   
+                        <div id="public">
+                            <h2>Zachwyć się naszymi realizacjami w przestrzeni miejskiej</h2>
+                            <img src="images/01.jpeg" alt="">
+                        </div>
+                        <div id="private">
+                            <h2>Postaw na kreatywność i profesjonalizm przy tworzeniu Twojego ogrodu</h2>
+                        </div>
+                    </div>
+        </div>
+    </div>        
+    <footer>
+        <div class="contact" id="contact">
+            <div>
+                <h1>Zaufaj nam </h1>
+            </div>
+            <div>
+                <h2>biuro<span>@</span>ogrod.projekt.eu</h2>
+                <h2>16 631-54-04</h2>
+
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>
+
+
