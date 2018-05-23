@@ -1,10 +1,12 @@
 document.addEventListener("DOMContentLoaded", function(){
 
-    const  divSlider = document.querySelector('div');
+    const  divSlider = document.getElementById('sliderWrapper');
     const  prevButton = document.getElementById('prevPicture');
     const  nextButton = document.getElementById('nextPicture');
+    
+    const listElements = document.getElementsByClassName('nurserySliderElement');
+    // const sliderCompaniesElement = document.getElementsByClassName('sliderCompaniesElement');
     let toChange = 0;
-    const listElements = document.querySelectorAll('li');
     listElements[toChange].classList.add('visible');
     divSlider.classList.add('slider');
     prevButton.addEventListener('click', function () {
@@ -35,6 +37,19 @@ function typeWriter() {
     setTimeout(typeWriter, speed);
   }
 }
+//autoslider
+let counter = 0;
+const sliderCompaniesElement = document.getElementsByClassName('sliderCompaniesElement'); 
+function autoSlider(){
+    sliderCompaniesElement[counter].classList.remove('visible');
+    counter -= 1;
+    setTimeout(autoSlider,5000);
+    if (counter < 0){
+    counter = sliderCompaniesElement.length-1;
+    }
+    sliderCompaniesElement[counter].classList.add('visible');
+    
+}
 
 const nurseryBtn = document.getElementById("nurseryBtn");
 console.log(nurseryBtn);
@@ -43,17 +58,20 @@ nurseryBtn.addEventListener('click', function(){
     typeWriter()
 })
 // on site welcom text
-window.onload = typeWriter();
+onload = typeWriter();
+onload = autoSlider();
+
 
 // to pause video 
-const vid = document.getElementById("myVideo"); 
-function pauseVid() { 
-    vid.pause(); 
-}
-const stopButton = document.getElementById("stopVid");
-stopButton.addEventListener("click", function(){
-    pauseVid()
-});
+// const vid = document.getElementById("myVideo"); 
+// function pauseVid() { 
+//     vid.pause(); 
+// }
+// const stopButton = document.getElementById("stopVid");
+// stopButton.addEventListener("click", function(){
+//     pauseVid()
+// });
+
 
 
 });
