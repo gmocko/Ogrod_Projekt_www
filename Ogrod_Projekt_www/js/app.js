@@ -3,9 +3,7 @@ document.addEventListener("DOMContentLoaded", function(){
     const  divSlider = document.getElementById('sliderWrapper');
     const  prevButton = document.getElementById('prevPicture');
     const  nextButton = document.getElementById('nextPicture');
-    
     const listElements = document.getElementsByClassName('nurserySliderElement');
-    // const sliderCompaniesElement = document.getElementsByClassName('sliderCompaniesElement');
     let toChange = 0;
     listElements[toChange].classList.add('visible');
     divSlider.classList.add('slider');
@@ -25,6 +23,29 @@ document.addEventListener("DOMContentLoaded", function(){
         }
         listElements[toChange].classList.add('visible');
     });
+    const  divSliderPrivate = document.getElementById('sliderWrapperPrivate');
+    const  prevPicturePrivate = document.getElementById('prevPicturePrivate');
+    const  nextPicturePrivate = document.getElementById('nextPicturePrivate');
+    const listElementsPrivate = document.getElementsByClassName('privateSliderElement');
+    let toChangePrivate = 0;
+    listElementsPrivate[toChange].classList.add('visible');
+    divSliderPrivate.classList.add('slider');
+    prevPicturePrivate.addEventListener('click', function () {
+        listElementsPrivate[toChangePrivate].classList.remove('visible');
+        toChangePrivate -= 1;
+        if (toChangePrivate < 0){
+            toChangePrivate = listElementsPrivate.length-1;
+        }
+        listElementsPrivate[toChangePrivate].classList.add('visible');
+    });
+    nextPicturePrivate.addEventListener('click', function () {
+        listElementsPrivate[toChangePrivate].classList.remove('visible');
+        toChangePrivate += 1;
+        if (toChangePrivate > listElementsPrivate.length-1){
+            toChangePrivate = 0;
+        }
+        listElementsPrivate[toChangePrivate].classList.add('visible');
+    });
 // print text 
     let j = 0;
     const txt = 'Zieleń to całe nasze życie'; 
@@ -43,25 +64,19 @@ const sliderCompaniesElement = document.getElementsByClassName('sliderCompaniesE
 function autoSlider(){
     sliderCompaniesElement[counter].classList.remove('visible');
     counter -= 1;
-    setTimeout(autoSlider,5000);
+    setTimeout(autoSlider,4000);
     if (counter < 0){
     counter = sliderCompaniesElement.length-1;
     }
     sliderCompaniesElement[counter].classList.add('visible');
     
 }
-
 const nurseryBtn = document.getElementById("nurseryBtn");
-console.log(nurseryBtn);
-
 nurseryBtn.addEventListener('click', function(){
     typeWriter()
 })
-// on site welcom text
 onload = typeWriter();
 onload = autoSlider();
-
-
 // to pause video 
 // const vid = document.getElementById("myVideo"); 
 // function pauseVid() { 
@@ -71,8 +86,5 @@ onload = autoSlider();
 // stopButton.addEventListener("click", function(){
 //     pauseVid()
 // });
-
-
-
 });
 
