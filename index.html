@@ -23,7 +23,7 @@
 <body> 
     <header>
         <div class="logo">
-            <a href="#"><img src="images/logo.png" alt="Logo Ogrod-Projekt"/></a>
+            <a href="#videoDiv"><img src="images/logo.png" alt="Logo Ogrod-Projekt"/></a>
         </div>
         <div class="navButtons logo">
            <a href="#contact" id="contactBtn">Kontakt</a>
@@ -33,7 +33,7 @@
     <div class="main"> 
         <div id="fullScreenDiv">
             <div id="videoDiv">      
-                <video id="myVideo" autoPlay loop class="video-background" muted playsInline>
+                <video id="myVideo"  preload autoPlay loop class="video-background" muted playsInline>
                     <source
                     src="images/background_v5.mp4"
                     type="video/mp4"/>        
@@ -45,9 +45,9 @@
                 </div>
                 <!-- <button id="stopVid">||</button>   -->
                 <div class="buttons">
-                    <a id="nurseryBtn" href="#nursery">Szkółki</a>
-                    <a href="#public">Zieleń publiczna</a>
-                    <a href="#private">Ogrody</a>
+                    <a id="nurseryBtn" href="#nur">Szkółki</a>
+                    <a href="#pub">Zieleń publiczna</a>
+                    <a href="#priv">Ogrody</a>
                 </div>
             </div> 
         </div>             
@@ -55,7 +55,7 @@
             <div class="center">
                 <div id="nursery">
                      <div class="infoDivs">
-                         <h2>Poznaj nasze Centrum Ogrodnicze</h2>
+                         <h2 id="nur">Poznaj nasze Centrum Ogrodnicze</h2>
                     </div>
                     <div class="nurseryContent">
                         <div class="galleryWrapper"> 
@@ -125,7 +125,7 @@
                 </div>   
                 <div id="public">
                     <div class="infoDivs">
-                        <h2>Od ponad 20 lat zmieniamy Polskę!</h2>        
+                        <h2 id="pub">Od ponad 20 lat zmieniamy Polskę!</h2>        
                     </div> 
                     <div class="publicContent">
                         <div class="publicWrapper">
@@ -302,7 +302,7 @@
                 </div>
                 <div id="private">
                     <div class="infoDivs">
-                        <h2>Projekty i realizacje ogrodów</h2>
+                        <h2 id="priv">Projekty i realizacje ogrodów</h2>
                     </div>
                     <div class="privateContent">
                         <div class="privateTextContent">

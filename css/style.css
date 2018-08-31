@@ -18,7 +18,7 @@ body {
     line-height:1;
     width: 100%;
     min-height: 100%;
-    background: rgba(36, 81, 31,1);
+    /* background: rgba(36, 81, 31,1); */
     background-image: url("../images/background_image.jpg");
     background-attachment: fixed;
     background-size: cover;   
@@ -41,10 +41,10 @@ header {
     position: fixed;
     z-index: 1;
     width: 100%;
-    height: 3vw;
+    height: 5vw;
     min-width: 100%;
     display: flex;
-    min-height: 5vh;
+    min-height: 6vh;
     justify-content: space-around;
     align-items: center;
     background-color: rgba(255, 255, 255, 0.8);
@@ -79,7 +79,7 @@ header {
     display: flex;
     background-color: rgba(192, 192, 192, 0.5);
     width: 16vh;
-    height: 3vh;
+    height: 5vh;
     color: #faebd7;
     font-weight: bold;
     border-radius: 1vh;
@@ -87,9 +87,11 @@ header {
     align-items: center;
     justify-content: center;
     text-shadow: 1px 1px 1px #000000;
+    transition: .33s all;
 }
 #contactBtn:hover {
     background-color:#a6d885;
+    box-shadow: 0 0 12px #a6d885;
 }
 #videoDiv {
     position: absolute;  
@@ -144,7 +146,7 @@ h2 {
 .mainDiv, #nursery, #public, #private {
     height: 100vh;
     display: flex; 
-    box-shadow: 2px 10px 18px #abc947;
+    box-shadow: 2px 2px 2px #abc947;
     width: 100%; 
     padding-top: 5vh !important;
 }
@@ -168,7 +170,7 @@ h2 {
 }
 .buttons > a, #stopVid{
     display: flex;
-    background-color: rgba(192, 192, 192, 0.5);
+    background-color: rgba(192, 192, 192, 0.8);
     width: 24vh;
     height: 6vh;
     color: #faebd7;
@@ -178,9 +180,11 @@ h2 {
     align-items: center;
     justify-content: center;
     text-shadow: 1px 1px 1px #000000; 
+    transition: .33s all;
 }
 .buttons > a:hover, #stopVid:hover {
-    background-color: rgba(0,167,0,.5);
+    background-color: rgba(0,167,0,.7);
+    box-shadow: 0 0 12px rgba(0,167,0,1);
 }
 .contact {
     height: 33vh;
@@ -352,12 +356,21 @@ span {
     margin-right: 10px;
 }
 .realizations div{
-    box-shadow: 10px 10px 30px #658327; 
+    box-shadow: 2px 2px 2px #658327; 
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin: 1%;
+    transition: .33s all;
 }  
+.realizations div:hover{
+    box-shadow: 10px 10px 10px #658327; 
+
+}
+
+
+
+
 .realizations p{
     font-size: 1.5rem;
 }
@@ -569,5 +582,37 @@ footer {
     }
     #contactBtn {
         height: 6vh
+    }
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        margin-bottom: 20vh;
+    }
+
+    .buttons > a, #stopVid{
+        display: flex;
+        background-color: rgba(192, 192, 192, 0.8);
+        width: 36vh;
+        height: 10vh;
+        color: #faebd7;
+        font-weight: bold;
+        border-radius: 2vh;
+        font-size: 2vh;
+        align-items: center;
+        justify-content: center;
+        text-shadow: 1px 1px 1px #000000; 
+        transition: .33s all;
+    }
+    #demo{
+        display: none;
+    }
+    header {
+        height: 15vh;
+    }
+    #sliderWrapper img, #sliderWrapperPrivate img {
+        
+        border-radius: 10%;
     }
 }

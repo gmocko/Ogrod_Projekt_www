@@ -75,8 +75,18 @@ const nurseryBtn = document.getElementById("nurseryBtn");
 nurseryBtn.addEventListener('click', function(){
     typeWriter()
 })
-onload = typeWriter();
+window.onload = typeWriter();
 onload = autoSlider();
+// smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({ 
+            behavior: 'smooth'
+        });
+    });
+});
 // to pause video 
 // const vid = document.getElementById("myVideo"); 
 // function pauseVid() { 
